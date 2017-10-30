@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>人脸识别查询系统</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+ 
+  <link rel="stylesheet" href="/static/dist/mycss.css">
+  <link rel="stylesheet" href="/static/dist/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/static/dist/css/normalize.css" />
+<link rel="stylesheet" href="/static/dist/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="dist/css/demo.css"> -->
+<link rel="stylesheet" href="/static/dist/css/style.css">
+</head>
+<body>
+    <header></header>
+    <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe> 
+    <div class="content">
+      <div class="row" id="search">
+        <p class="title" class="col-lg-6" >人脸库查询</p>
+        <div class="search d7">
+        <form  id="saveReportForm" target="nm_iframe">
+          <input id="inputname" type="text" placeholder="输入姓名搜索..." name="name">
+          <button onclick="Search()"></button>
+        </form>
+      </div>
+    </div><!-- /.row -->
+
+    <section class="imagesec">
+      <ul id="imageul"> 
+      </ul>
+    </section>
+
+    <footer>
+      <div id="pagebox">
+      </div>
+    </footer>
+</div>
+  <script src="/static/dist/jquery-3.2.1.min.js"></script>
+    <script src="/static/dist/js/delete.js"></script>
+     <script src="/static/dist/js/page.js"></script>
+  
+
+<script>
+
+ </script>
+</body>
+</html>

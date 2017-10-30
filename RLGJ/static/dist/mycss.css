@@ -1,0 +1,45 @@
+#search{
+   height:55px;
+   background: #4C9DCC;
+   padding:10px;
+   padding-left:30px;
+   width:100%;
+   margin:0px;
+}
+.title{
+   font-family:Microsoft YaHei;
+   font-weight:700;color:white;
+   font-size:30px;
+   position: absolute;
+   top:5px;
+
+}
+#imageul{
+   padding-left: 0px
+}
+#imageul li{
+   list-style: none;
+   display: inline-block;
+   width:140px;
+   margin-right: 5px;
+}
+/*.imageul li p{
+   display: block;
+   width: 144px;
+}*/
+.content{
+   font-size:12px;
+}
+.img-rounded{
+   width:130px;
+}
+.imagesec{
+   margin: 20px;
+}
+#pagebox li{
+   list-style: none;
+   display: inline-block;
+}
+#pagebox{
+   text-align: center;
+}
