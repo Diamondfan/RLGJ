@@ -11,7 +11,7 @@ function getall(page,name){
 	if(name){
 		query['name']=name;
 	}
-	$.get("../../RLGJ/OnDelete/",query,function(result){
+	$.get("../../RLGJ/OnDeleteOne/",query,function(result){
 		var data=result['img'];
 		var html='';
 		for(var key in data){
@@ -61,7 +61,7 @@ function Delete(id){
 	var query={
 		'id':id
 	}
-	$.get("../../RLGJ/OnDelete",query,function(result){
+	$.get("../../RLGJ/OnDeleteOne/",query,function(result){
 		getall();
 	})
 

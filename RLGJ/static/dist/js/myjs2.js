@@ -5,12 +5,13 @@ var box = document.getElementById("box");
 var closed = document.getElementById("closed");
 var button = document.getElementById("button");
 var timecontent = document.getElementById("timecontent");
+var globalid = 0;
 $(document).ready(function(){
 	getall();
-	$("#imageul").on("click","li",function(event){
-                  var target = $(event.target);
-                  var status=target.prop("status");
-				  var id=target.prop("id");
+	$("#imageul").delegate("li","click",function(event){
+                  var target = $(this);
+                  var status=target.attr("status");
+				  globalid=target.prop("id");
 				  if(status){
 					layout.style.display = "block"; 
 					box.style.display = "block";  
@@ -19,10 +20,14 @@ $(document).ready(function(){
 })
 
 
-layout.onclick = closed.onclick = function() { 
+layout.onclick = function() { 
         layout.style.display = "none"; 
         box.style.display = "none"; 
 }
+$('#closed').on('click',function() {
+    layout.style.display = "none"; 
+        box.style.display = "none"; 
+ });
 
 function getall(page,name){
 	var query={
@@ -31,7 +36,7 @@ function getall(page,name){
 	if(name){
 		query['name']=name;
     }
-	$.get("../../RLGJ/OnMessage/",query,function(result){
+	$.get("../../RLGJ/OnSelect/",query,function(result){
         var data=result['img'];
         var html='';
 		for(var key in data){

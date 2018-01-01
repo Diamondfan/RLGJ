@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib import staticfiles
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from RLGJ.views import OnMessage, OnAdd, OnDelete, OnCompare
+from RLGJ.views import OnMessage, OnAdd, OnDelete, OnCompare, OnSelect, OnAddOne, OnDeleteOne
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,6 +25,9 @@ urlpatterns = [
     url(r'^RLGJ/OnAdd/$', OnAdd),
     url(r'^RLGJ/OnDelete/$', OnDelete),
     url(r'^RLGJ/OnCompare/$', OnCompare),
+    url(r'^RLGJ/OnSelect/$', OnSelect),
+    url(r'^RLGJ/OnAddOne/$', OnAddOne),
+    url(r'^RLGJ/OnDeleteOne/$', OnDeleteOne),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

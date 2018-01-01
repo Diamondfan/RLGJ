@@ -26,7 +26,7 @@ SECRET_KEY = '1x0e*+m9!e$^txv@!2z@%4+x^0f%l4$cgmy(tlg*lo#bz)#e-i'
 ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if socket.gethostname() == 'Richardfan':
+if socket.gethostname() == 'speech-gpu':
     DEBUG = True
 else:
     DEBUG = False
@@ -124,7 +124,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -136,7 +136,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
          os.path.join(BASE_DIR, 'static'),
-        '/home/fan/socket/Yuyinzhuanhuan/face/lfw/',
+         #'/home/fan/socket/Yuyinzhuanhuan/face/lfw/',
          os.path.join(BASE_DIR, 'RLGJ', 'static'),
         )
 
